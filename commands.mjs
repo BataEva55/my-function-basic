@@ -1,3 +1,24 @@
+/*
+*compare (a, b)
+*if a > b ret 1
+*if b > a ret -1
+*if a===b ret 0 */
+
+function getMax(arr){
+  let max = arr[0];
+  let i = 1;
+
+  while (i < arr.length){
+    if( compare(arr[i], max)===1){
+      max = arr[i];
+      }
+      i++;
+    }
+    return max;
+  }
+
+
+
 export function getAlbumWithMostOfGenres(albums) {
   let mostOfGenres = albums[0];
   for (let i = 0; i < albums.length; i++) {
@@ -28,6 +49,9 @@ export function getAlbumWithFewestGenres(albums) {
   console.log("Fewes genres", minOfGenres.title);
 }
 
+ function search(arr, equals){
+
+ }
 
 function getByKeyValue(arr, key, value) {
   for (let i = 0; i < arr.length; i++) {
@@ -63,3 +87,15 @@ export function getAlbumByGenre(albums, byGenre) {
     }
   }
 }
+
+//callbacks
+function foo(fn) {
+fn();
+}
+
+function bar() {
+
+}
+
+fn = bar;
+foo(bar);
